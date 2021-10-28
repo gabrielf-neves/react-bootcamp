@@ -1,0 +1,71 @@
+//Estilização do corpo principal e seção principal
+
+main{
+
+    section{
+        @include create-container (100%, 700px, 0px, 0px, transparent);
+        @include flexbox(flex, column, left, center);
+        background: linear-gradient( $section-gradient-dark 0%, $dark-background 100%), url('../images/section-banner-stranger-things.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        .section-info{
+            padding: 0px 64px;
+
+            img{
+                max-width: 500px;
+                height: auto;
+                margin-bottom: 42px;
+            }
+           
+            p{
+                @include  text-style($regular, 16px, $regular, $light-text);
+                line-height: 24px;
+                max-width: 600px;
+                margin: 20px 0px;
+
+                span{
+                    font-size: 14px;
+                    border: solid 1px $light-text;
+                    padding: 0px 4px;
+                }
+
+                a{
+                    @include  text-style($regular, 16px, $regular, $light-text);
+                    text-decoration: none;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .section-buttons-wrapper{
+                @include flexbox(flex, row, center, left);
+                text-transform: uppercase;
+                margin-top: 60px;
+
+                .section-btn{
+                    @include create-container(250px, auto, 12px, 0px, transparent);
+                    @include flexbox(flex, row, center, center);
+                    @include  text-style($regular, 16px, $semi-bold, $light-text);
+                    cursor: pointer;
+                    border: solid 1px $light-text;
+                    border-radius: 2px;
+                    margin-right: 30px;
+                    
+                    .material-icons{
+                        margin-right: 12px;
+                    }
+
+                    &:hover{
+                        border-color: $dark-component;
+                        background-color: $light-text;
+                        color: $dark-component;
+                        transition: .2s;
+                    }
+                }
+            }
+        }
+    }
+}

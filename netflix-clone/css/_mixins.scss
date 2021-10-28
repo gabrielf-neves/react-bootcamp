@@ -1,0 +1,26 @@
+// Padrão de estilos comuns
+
+// Define as propriedades de um contâiner
+@mixin create-container ($width, $height, $padding, $margin, $background-color){
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+    background-color: $background-color;
+}
+
+// Aplica a propriedade flexbox à um contâiner
+@mixin flexbox ($flex-type, $flex-direction, $align-items, $justify-content) {
+    display: $flex-type;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+// Define a estilização do texto de um componente
+@mixin text-style ($font-type, $font-size, $font-weight, $font-color) {
+    font-family: $font-type;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $font-color;
+}

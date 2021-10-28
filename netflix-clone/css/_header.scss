@@ -1,0 +1,21 @@
+//Estilização do cabeçalho
+
+header{
+    @include create-container(100%, auto, 20px 46px, 0, $pure-dark);
+    @include flexbox(flex, row, center, space-between);
+
+    p{
+        @include  text-style($title, 42px, $regular, $red-logo);
+        cursor: pointer;
+    }
+ 
+    nav{
+
+        a{
+            @include  text-style($regular, 18px, $regular, $light-text);
+            text-decoration: none;
+            margin-left: 20px;
+        }
+    }
+   
+}
