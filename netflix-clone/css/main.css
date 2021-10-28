@@ -35,18 +35,54 @@ header {
 header p {
   font-family: "Bebas Neue", sans-serif;
   font-size: 42px;
-  font-weight: "Roboto", sans-serif;
+  font-weight: 400;
   color: #e50914;
   cursor: pointer;
 }
 
 header nav a {
-  font-family: "Roboto", sans-serif;
+  font-family: 400;
   font-size: 18px;
-  font-weight: "Roboto", sans-serif;
+  font-weight: 400;
   color: #f5f5f1;
   text-decoration: none;
   margin-left: 20px;
+}
+
+header #header-responsive-btn {
+  cursor: pointer;
+  display: none;
+  color: #f5f5f1;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    padding: 20px 32px;
+  }
+  header #header-responsive-btn {
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header p {
+    font-size: 36px;
+  }
+  header #header-responsive-btn {
+    font-size: 30px;
+  }
+}
+
+main {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
 }
 
 main section {
@@ -86,9 +122,9 @@ main section .section-info img {
 }
 
 main section .section-info p {
-  font-family: "Roboto", sans-serif;
+  font-family: 400;
   font-size: 16px;
-  font-weight: "Roboto", sans-serif;
+  font-weight: 400;
   color: #f5f5f1;
   line-height: 24px;
   max-width: 600px;
@@ -102,9 +138,9 @@ main section .section-info p span {
 }
 
 main section .section-info p a {
-  font-family: "Roboto", sans-serif;
+  font-family: 400;
   font-size: 16px;
-  font-weight: "Roboto", sans-serif;
+  font-weight: 400;
   color: #f5f5f1;
   text-decoration: none;
 }
@@ -114,6 +150,11 @@ main section .section-info p a:hover {
 }
 
 main section .section-info .section-buttons-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  background-color: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,7 +173,7 @@ main section .section-info .section-buttons-wrapper {
 }
 
 main section .section-info .section-buttons-wrapper .section-btn {
-  width: 250px;
+  width: 100%;
   height: auto;
   padding: 12px;
   margin: 0px;
@@ -150,10 +191,12 @@ main section .section-info .section-buttons-wrapper .section-btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 400;
   font-size: 16px;
   font-weight: 600;
   color: #f5f5f1;
+  max-width: 250px;
+  text-decoration: none;
   cursor: pointer;
   border: solid 1px #f5f5f1;
   border-radius: 2px;
@@ -172,11 +215,149 @@ main section .section-info .section-buttons-wrapper .section-btn:hover {
   transition: .2s;
 }
 
+@media screen and (max-width: 675px) {
+  main section .section-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0px 32px;
+    z-index: 3;
+  }
+  main section .section-info img {
+    width: 100%;
+    max-width: 450px;
+  }
+  main section .section-info p {
+    font-size: 15px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+  }
+  main section .section-info .section-buttons-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  main section .section-info .section-buttons-wrapper .section-btn {
+    font-size: 14px;
+    max-width: 100%;
+    margin: 0px;
+    margin-bottom: 12px;
+  }
+  main section .section-info .section-buttons-wrapper .section-btn .material-icons {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  main section .section-info p {
+    max-width: 320px;
+  }
+  main section .section-info .section-buttons-wrapper .section-btn {
+    font-size: 14px;
+    max-width: 250px;
+    margin-bottom: 16px;
+  }
+}
+
 .carousel {
   width: 100%;
   height: auto;
   padding: 0px;
   margin: 0px;
-  background-color: #292f33;
+  background-color: #121212;
+  -webkit-box-shadow: 0px -40px 57px 50px #121212;
+  box-shadow: 0px -40px 57px 50px #121212;
+  padding-bottom: 46px;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel h3 {
+  font-family: 400;
+  font-size: 20px;
+  font-weight: 400;
+  color: #f5f5f1;
+  padding: 0px 46px;
+  padding-top: 24px;
+  margin-bottom: 32px;
+}
+
+.carousel p {
+  font-family: 400;
+  font-size: 16px;
+  font-weight: 600;
+  color: #121212;
+  width: 100%;
+  text-align: center;
+  margin: 32px 0px;
+}
+
+.carousel:hover > p {
+  color: #292f33;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.carousel .owl-carousel .item img {
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  max-height: 420px;
+  border: solid 4px #121212;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+.carousel .owl-carousel .item img:hover {
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+  opacity: 1;
+  -webkit-filter: saturate(1.2);
+          filter: saturate(1.2);
+}
+
+@media screen and (max-width: 720px) {
+  .carousel h3 {
+    font-size: 18px;
+    text-align: left;
+    padding: 0px 36px;
+    padding-top: 8px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carousel {
+    z-index: 2;
+  }
+  .carousel h3 {
+    text-align: center;
+    margin-top: -30px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

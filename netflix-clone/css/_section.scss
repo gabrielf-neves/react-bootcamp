@@ -1,7 +1,8 @@
 //Estilização do corpo principal e seção principal
 
 main{
-
+    @include create-container(100%, auto, 0px, 0px, transparent);
+    
     section{
         @include create-container (100%, 700px, 0px, 0px, transparent);
         @include flexbox(flex, column, left, center);
@@ -41,14 +42,17 @@ main{
                 }
             }
             .section-buttons-wrapper{
+                @include create-container(100%, auto, 0px, 0px, none);
                 @include flexbox(flex, row, center, left);
                 text-transform: uppercase;
                 margin-top: 60px;
 
                 .section-btn{
-                    @include create-container(250px, auto, 12px, 0px, transparent);
+                    @include create-container(100%, auto, 12px, 0px, transparent);
                     @include flexbox(flex, row, center, center);
                     @include  text-style($regular, 16px, $semi-bold, $light-text);
+                    max-width: 250px;
+                    text-decoration: none;
                     cursor: pointer;
                     border: solid 1px $light-text;
                     border-radius: 2px;
@@ -63,6 +67,72 @@ main{
                         background-color: $light-text;
                         color: $dark-component;
                         transition: .2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsivo
+@media screen and (max-width: 675px){
+  main{
+    section {
+        .section-info{
+            @include flexbox(flex, column, center, center);
+            padding: 0px 32px;
+            z-index: 3;
+            img{
+                width: 100%;
+                max-width: 450px;
+            }
+            
+            p{
+                font-size: 15px;
+                width: 100%;
+                max-width: 450px;
+                text-align: center;
+            }
+            .section-buttons-wrapper{
+                @include flexbox(flex, column, center, center);
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin-top: 20px;
+
+                .section-btn{
+                    font-size: 14px;
+                    max-width: 100%;
+                    margin: 0px;
+                    margin-bottom: 12px;
+
+                    .material-icons{
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        
+    }
+  }
+}
+
+@media screen and (max-width: 380px){
+    main{
+        section{
+            .section-info{
+                p{
+                    max-width: 320px;
+                }
+
+                .section-buttons-wrapper{
+                 
+    
+                    .section-btn{
+                        font-size: 14px;
+                        max-width: 250px;
+                        margin-bottom: 16px;
+                    
                     }
                 }
             }

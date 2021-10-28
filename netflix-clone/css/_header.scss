@@ -17,5 +17,40 @@ header{
             margin-left: 20px;
         }
     }
+
+    #header-responsive-btn{
+        cursor: pointer;
+        display: none;
+        color: $light-text;
+        font-size: 36px;
+    }
    
+}
+
+// Responsivo
+
+@media screen and (max-width : 700px){
+
+   header{
+        padding: 20px 32px;
+        #header-responsive-btn{
+            display: block;
+        }
+
+        nav{
+            display: none;
+        }
+    }
+
+}
+
+@media screen and (max-width : 400px){
+    header{
+        p{
+            font-size: 36px;
+        }
+        #header-responsive-btn{
+            font-size: 30px;
+        }
+    }
 }
