@@ -37,6 +37,12 @@
     <td>❔</td>
     <td>❔</td>
   </tr>
-  
-
 </table>
+
+<h3>Mídia</h3>
+
+- Netflix Clone
+>![react-bootcamp-midia-1](https://user-images.githubusercontent.com/90214509/179033540-6f5eba84-be36-4722-9cf2-82540326dad0.gif)
+>![react-bootcamp-media-2](https://user-images.githubusercontent.com/90214509/179034682-75bb83a6-cad2-4b92-848a-6e7d25df6063.gif)
+
+
